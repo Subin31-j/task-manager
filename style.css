@@ -1,0 +1,165 @@
+:root {
+    --primary: #2563eb;
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --text: #1f2937;
+    --border: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* FORM */
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form input {
+    flex: 1;
+    padding: 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+form button {
+    padding: 0.7rem 1rem;
+    border: none;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* TASK LIST */
+
+#taskList {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#taskList li button {
+    background: crimson;
+    border: none;
+    color: white;
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* STATS */
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* DARK MODE BUTTON */
+
+#toggleTheme {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    background: #111827;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+
+#taskList li {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+    form {
+        flex-direction: column;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+    }
+}

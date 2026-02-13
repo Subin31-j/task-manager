@@ -1,0 +1,15 @@
+body.dark {
+    --bg: #1f2937;
+    --card: #111827;
+    --text: #f9fafb;
+    --border: #374151;
+}
+
+body.dark #taskList li {
+    background: #374151;
+}
+
+body.dark .filters button:hover {
+    background: white;
+    color: black;
+}
